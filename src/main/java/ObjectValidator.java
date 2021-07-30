@@ -20,7 +20,7 @@ public class ObjectValidator {
             f.setAccessible(true);
             if(f.get(object) == null){
                 EnumObjectValidator.NULL.setField(f.getName());
-                EnumObjectValidator.NULL.setClase(f.getType().toString());
+                EnumObjectValidator.NULL.setClase(tClassName);
                 EnumObjectValidator.NULL.setErrorMessage("Error - En la Entidad: " + EnumObjectValidator.NULL.getClase() + " se encontró el atributo " + EnumObjectValidator.NULL.getField() + " nulo");
                 EnumObjectValidator.NULL.setMatch(false);
                 return false;
