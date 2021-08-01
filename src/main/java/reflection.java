@@ -19,7 +19,11 @@ public class reflection {
         System.out.println("\n*************************** End ***************************");
 
         String error = objectValidator.getError();
-        System.out.println(EnumObjectValidator.valueOf(error).getField() + " " + EnumObjectValidator.valueOf(error).getErrorMessage());
+        if(!error.isEmpty()) {
+            System.out.println(EnumObjectValidator.valueOf(error).getField() + " " + EnumObjectValidator.valueOf(error).getErrorMessage());
+        }else{
+            System.out.println("No hay errores..........");
+        }
     }
 
 }

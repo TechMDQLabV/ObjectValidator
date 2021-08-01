@@ -9,7 +9,7 @@ public class Account {
     public Account() {
         this.accountNumber = "123456";
         this.accountBalance = 250000;
-      //  this.movement = new Movements();
+        this.movement = new Movements();
     }
 
     public Account(String accountNumber, Integer accountBalance) {
