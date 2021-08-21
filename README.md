@@ -5,7 +5,7 @@ El servicio **OnHost**, ubicado en la *Technical API*, es el mediador entre los 
 
 ## Operaciones
 
-1. [blanqueoPinAlfabetico](#blanqueo-pin-alfabetico)
+1. [blanqueoPinAlfabetico](#blanqueoPinAlfabetico)
 2. [clientesConsulta](#clientesConsulta)
 3. [confirmarTdvBanelco](#confirmarTdvBanelco)
 4. [consEstadoBankingCard](#consEstadoBankingCard)
@@ -25,6 +25,7 @@ El servicio **OnHost**, ubicado en la *Technical API*, es el mediador entre los 
 18. [validacionTam](#validacionTam)
 
 > **Aclaración:** por cada operación antes nombrada se detallara los ejemplos de invocación, diagrama y URLs correspondientes.
+
 
 
 
