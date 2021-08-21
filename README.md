@@ -5,7 +5,7 @@ El servicio **OnHost**, ubicado en la *Technical API*, es el mediador entre los 
 
 ## Operaciones
 
-1. [blanqueoPinAlfabetico](#blanqueo-Pin-Alfabetico)
+1. [blanqueoPinAlfabetico](#blanqueo-pin-alfabetico)
 2. [clientesConsulta](#clientesConsulta)
 3. [confirmarTdvBanelco](#confirmarTdvBanelco)
 4. [consEstadoBankingCard](#consEstadoBankingCard)
@@ -28,7 +28,7 @@ El servicio **OnHost**, ubicado en la *Technical API*, es el mediador entre los 
 
 
 
-##BlanqueoPinAlfabetico
+##blanqueo-pin-alfabetico
 Se utiliza para recuperar o habilitar la clave PIL alfabetica.
 
 <details>
