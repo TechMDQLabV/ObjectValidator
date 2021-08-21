@@ -28,7 +28,7 @@ El servicio **OnHost**, ubicado en la *Technical API*, es el mediador entre los 
 
 
 
-##blanqueo-pin-alfabetico
+## blanqueoPinAlfabetico
 Se utiliza para recuperar o habilitar la clave PIL alfabetica.
 
 <details>
@@ -169,7 +169,7 @@ Response - blanqueoPinAlfabeticoOutput
 Volver a [Operaciones](#Operaciones).
 
 
-##clientesConsulta
+## clientesConsulta
 Se utiliza para la obtención de datos del cliente por medio del número de documente y tipo.
 
 <details>
