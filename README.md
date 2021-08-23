@@ -2,7 +2,7 @@
 
 ## RETAIL
 
-# Indice
+## Indice
 
 # Este es un título de tercer nivel
 
