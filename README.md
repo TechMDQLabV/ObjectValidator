@@ -70,4 +70,4 @@ Este es un link hacia [la página web de ANSES](blank:#https://www.anses.gob.ar/
 
 [<<< Volver al Índice >>>](#Indice)
 
-[<<< Volver al Principio >>>](#RETAIL - algo más)
+[<<< Volver al Principio >>>](#RETAIL - algo mas)
