@@ -1,6 +1,6 @@
 **Esto es negrita**
 
-## RETAIL - algo más
+## RETAIL
 
 # Indice
 
@@ -70,4 +70,4 @@ Este es un link hacia [la página web de ANSES](blank:#https://www.anses.gob.ar/
 
 [<<< Volver al Índice >>>](#Indice)
 
-[<<< Volver al Principio >>>](#RETAIL-algomas)
+[<<< Volver al Principio >>>](#RETAIL)
