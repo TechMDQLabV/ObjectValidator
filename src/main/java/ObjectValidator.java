@@ -12,25 +12,24 @@ public class ObjectValidator {
     private boolean validatorRecursive(Field[] fields, Object object) throws ClassNotFoundException, IllegalAccessException {
         Class tClass = Class.forName(object.getClass().getName());
         String tClassName = tClass.toString().substring(tClass.toString().lastIndexOf('.') + 1).trim();
-
-        for (Field f : fields) {
-            f.setAccessible(true);
-            if (f.get(object) == null) {
-                setEnumObjectValidatorNull(f, tClassName);
+        for (Field field : fields) {
+            field.setAccessible(true);
+            if (field.get(object) == null) {
+                setEnumObjectValidatorNull(field, tClassName);
                 return false;
             }
 
-            if (!f.getType().toString().contains("java")) {
+            if (!field.getType().toString().contains("java")) {
                 ObjectValidator objectValidator = new ObjectValidator();
-                Boolean b = objectValidator.validator(f.get(object));
+                Boolean b = objectValidator.validator(field.get(object));
                 if (Boolean.FALSE.equals(b)) {
                     return false;
                 }
             }
 
             for (EnumObjectValidator v : EnumObjectValidator.values()) {
-                if (f.getName().equals(v.getField()) && tClassName.equals(v.getClase())) {
-                    v.setMatch(f.get(object).toString().matches(v.getRegex()));
+                if (field.getName().equals(v.getField()) && tClassName.equals(v.getClase())) {
+                    v.setMatch(field.get(object).toString().matches(v.getRegex()));
                     if (Boolean.FALSE.equals(v.getMatch())) {
                         return false;
                     }
