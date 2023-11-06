@@ -1,0 +1,11 @@
+
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Å¬ê8ôåÉ­º1
+7
+java:S1220""Move this file to a named package.8Àœ£§º1
+L	java:S106"+Replace this use of System.out by a logger.(¨¶ÑÍşÿÿÿÿ8ƒæÉ­º1
+G	java:S106"+Replace this use of System.out by a logger.(¼¡¨ò8ƒæÉ­º1
+L	java:S106"+Replace this use of System.out by a logger.(æ¨¤šøÿÿÿÿ8ƒæÉ­º1
+L	java:S106"+Replace this use of System.out by a logger.(ö±ªåşÿÿÿÿ8„æÉ­º1
+L	java:S106"+Replace this use of System.out by a logger.(ÓôÍ€øÿÿÿÿ8…æÉ­º1
+G	java:S106"+Replace this use of System.out by a logger.(¦ğŞº8†æÉ­º1
+L	java:S106"+Replace this use of System.out by a logger.(øùï¶üÿÿÿÿ8‡æÉ­º1

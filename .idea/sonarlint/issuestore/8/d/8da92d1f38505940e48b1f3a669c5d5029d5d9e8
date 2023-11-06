@@ -1,0 +1,24 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(Ù¥Õ›ûÿÿÿÿ
+7
+java:S1220""Move this file to a named package.8»ûî¹·1
+i
+java:S3008"NRename this field "TAB" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–Ùâ¡øÿÿÿÿ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ÂÄş
+K
+java:S2696"6Make the enclosing method "static" or remove this set.(›ãÂ!
+G
+java:S3011",This accessibility update should be removed.(Í”úÆùÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(À‹¥ 
+@	java:S106"+Replace this use of System.out by a logger.(Ş‚…š
+E	java:S106"+Replace this use of System.out by a logger.(İô«øÿÿÿÿ
+E	java:S106 "+Replace this use of System.out by a logger.(ç«ÚÒÿÿÿÿÿ
+E	java:S106!"+Replace this use of System.out by a logger.(İªÛ¸üÿÿÿÿ
+@	java:S106""+Replace this use of System.out by a logger.(¨×
+E	java:S106-"+Replace this use of System.out by a logger.(Óğ—èúÿÿÿÿ
+@	java:S106."+Replace this use of System.out by a logger.(éÑíÅ
+@	java:S106/"+Replace this use of System.out by a logger.(ÍÒ¿½
+E	java:S1060"+Replace this use of System.out by a logger.(Óğ—èúÿÿÿÿ
+@	java:S1063"+Replace this use of System.out by a logger.(›ÍàØ
