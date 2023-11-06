@@ -1,8 +1,14 @@
-import models.EnumObjectValidator;
+import models.AttributeValidator;
+import models.AttributeValidatorList;
+import models.ErrorMessage;
+
 
 import java.lang.reflect.Field;
 
 public class ObjectValidatorSingleton {
+
+
+    private ErrorMessage errorMessage = new ErrorMessage();
 
     private static ObjectValidatorSingleton instance = null;
 
@@ -15,59 +21,56 @@ public class ObjectValidatorSingleton {
         return instance;
     }
 
-    public boolean validatorRecursive(Object object) throws ClassNotFoundException, IllegalAccessException {
-        Field[] fields = object.getClass().getDeclaredFields();
-        boolean result = true;
+    public ErrorMessage validatorRecursive(Object object, AttributeValidatorList attributeValidatorList) throws ClassNotFoundException, IllegalAccessException {
         Class<?> tClass = Class.forName(object.getClass().getName());
+        Field[] fields = tClass.getDeclaredFields();
+
         String tClassName = tClass.toString().substring(tClass.toString().lastIndexOf('.') + 1).trim();
         for (Field field : fields) {
             field.setAccessible(true);
             if (field.get(object) == null) {
-                setEnumObjectValidatorNull(field, tClassName);
-                return false;
+                setErrorMessage(field, tClassName);
+                return errorMessage;
             }
 
             if (!field.getType().toString().contains("java")) {
-                Boolean b = validatorRecursive(field.get(object));
-                if (Boolean.FALSE.equals(b)) {
-                    return false;
+                errorMessage = validatorRecursive(field.get(object), attributeValidatorList);
+                if (errorMessage.getError().equals(Boolean.FALSE)) {
+                    errorMessage.setError(Boolean.FALSE);
+                    return errorMessage;
                 }
             }
 
-            if (validateObjec(object, tClassName, field)){
-                return false;
+            if (validateObject(object, tClassName, field, attributeValidatorList)){
+                errorMessage.setError(Boolean.FALSE);
+                return errorMessage;
             }
         }
 
-        return result;
+        return errorMessage;
     }
 
-    private boolean validateObjec(Object object, String tClassName, Field field) throws IllegalAccessException {
-        for (EnumObjectValidator v : EnumObjectValidator.values()) {
-            if (field.getName().equals(v.getField()) && tClassName.equals(v.getClase())) {
-                v.setMatch(field.get(object).toString().matches(v.getRegex()));
-                if (Boolean.FALSE.equals(v.getMatch())) {
-                    return true;
-                }
-            }
+    private boolean validateObject(Object object, String tClassName, Field field, AttributeValidatorList attributeValidatorList) throws IllegalAccessException {
+        AttributeValidator attributeValidator = findValidator(attributeValidatorList,object,tClassName,field);
+        if (attributeValidator != null && !field.get(object).toString().matches(attributeValidator.getRegex())) {
+            errorMessage.setError(Boolean.TRUE);
+            return true;
         }
+        errorMessage.setError(Boolean.FALSE);
         return false;
     }
 
-    private void setEnumObjectValidatorNull(Field f, String tClassName){
-        EnumObjectValidator.NULL.setField(f.getName());
-        EnumObjectValidator.NULL.setClase(tClassName);
-        EnumObjectValidator.NULL.setErrorMessage("Error - En la Entidad: " + tClassName + " se encontró el atributo " + f.getName() + " nulo");
-        EnumObjectValidator.NULL.setMatch(false);
+    private AttributeValidator findValidator(AttributeValidatorList attributeValidatorList, Object object, String tClassName, Field field){
+        return attributeValidatorList.getAttributeValidatorList().stream()
+                .filter(v -> v.getField().equals(field.getName()) && v.getClase().equals(tClassName))
+                .findFirst()
+                .orElse(null);
     }
 
-    public String getError() {
-        String retorno = "";
-        for (EnumObjectValidator e : EnumObjectValidator.values()) {
-            if (Boolean.FALSE.equals(e.getMatch())) {
-                retorno = e.name();
-            }
-        }
-        return retorno;
+    private void setErrorMessage(Field f, String tClassName){
+        errorMessage.setError(Boolean.TRUE);
+        errorMessage.setField(f.getName());
+        errorMessage.setClase(tClassName);
+        errorMessage.setErrorMessage("Error - En la Entidad: " + tClassName + " se encontró el atributo " + f.getName() + " nulo");
     }
 }
