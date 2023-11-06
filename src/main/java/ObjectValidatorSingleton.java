@@ -35,14 +35,12 @@ public class ObjectValidatorSingleton {
 
             if (!field.getType().toString().contains("java")) {
                 errorMessage = validatorRecursive(field.get(object), attributeValidatorList);
-                if (errorMessage.getError().equals(Boolean.FALSE)) {
-                    errorMessage.setError(Boolean.FALSE);
+                if (Boolean.FALSE.equals(errorMessage.getError())) {
                     return errorMessage;
                 }
             }
 
             if (validateObject(object, tClassName, field, attributeValidatorList)){
-                errorMessage.setError(Boolean.FALSE);
                 return errorMessage;
             }
         }

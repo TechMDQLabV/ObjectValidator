@@ -7,11 +7,7 @@ public class Account {
     private Movements movement;
 
     public Account() {
-<<<<<<< HEAD
-        this.accountNumber = "1234567891";
-=======
        // this.accountNumber = "1234567891";
->>>>>>> master
         this.accountBalance = 250000;
         this.movement = new Movements();
     }
