@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Å¬ê8ôåÉ­º1
 7
 java:S1220""Move this file to a named package.8Àœ£§º1
@@ -9,3 +10,8 @@ L	java:S106"+Replace this use of System.out by a logger.(ö±ªåþÿÿÿÿ8„æÉ­º1
 L	java:S106"+Replace this use of System.out by a logger.(ÓôÍ€øÿÿÿÿ8…æÉ­º1
 G	java:S106"+Replace this use of System.out by a logger.(¦ðÞº8†æÉ­º1
 L	java:S106"+Replace this use of System.out by a logger.(øùï¶üÿÿÿÿ8‡æÉ­º1
+=======
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Å¬ê8ÉçÙã·1
+7
+java:S1220""Move this file to a named package.8ÊçÙã·1
+>>>>>>> b950e29 (add ObjectValidatorSingleton)

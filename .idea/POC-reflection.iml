@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module version="4">
   <component name="SonarLintModuleSettings">
+<<<<<<< HEAD
     <option name="uniqueId" value="eb82ae13-5921-47c0-8f0d-efae848d760f" />
+=======
+    <option name="uniqueId" value="7cedd6f4-9cb3-463e-94e9-9859b23017ca" />
+>>>>>>> b950e29 (add ObjectValidatorSingleton)
   </component>
 </module>
